@@ -13,7 +13,7 @@ class App extends Component {
   getRecipe = async (e)=>{
     e.preventDefault();
     const recipeName = e.target.elements.recipeName.value;
-    const api_link = `https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=5`;
+    const api_link = `https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=12`;
     const api_call = await fetch(api_link);
     const api_data = await api_call.json();
     this.setState({recipes: api_data.recipes});
